@@ -1,7 +1,4 @@
 {
-  "ignorePatterns": [
-    "playwright/**"
-  ],
   "plugins": [
     "oxc",
     "typescript",
