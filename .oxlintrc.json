@@ -1,0 +1,21 @@
+{
+  "ignorePatterns": [
+    "playwright/**"
+  ],
+  "plugins": [
+    "oxc",
+    "typescript",
+    "unicorn",
+    "react",
+    "nextjs",
+    "import"
+  ],
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "error"
+  },
+  "rules": {
+    "react-in-jsx-scope": "off"
+  }
+}

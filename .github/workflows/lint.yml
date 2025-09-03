@@ -1,0 +1,20 @@
+name: Lint
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    name: Oxlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Oxlint version
+        id: oxlint_version
+        run: |
+          echo "version=$(grep -o '"oxlint": *"[^"]*"' package.json | grep -o '"[^"]*"$' | tr -d '"^')" >> $GITHUB_OUTPUT
+      - uses: oxc-project/oxlint-action@v2.0.1
+        with:
+          config: .oxlintrc.json
+          all-files: false
+          version: ${{ steps.oxlint_version.outputs.version }}
