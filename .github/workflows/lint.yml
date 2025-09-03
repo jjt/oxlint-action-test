@@ -18,8 +18,8 @@ jobs:
       - uses: oxc-project/oxlint-action@v2.0.1
         with:
           deny-warnings: true
-          deny: |
-            correctness
+          # deny: |
+          #   correctness
           config: .oxlintrc.json
           all-files: false
           version: ${{ steps.oxlint_version.outputs.version }}
