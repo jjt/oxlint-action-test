@@ -1,2 +1,2 @@
-const notUsed = 'foo';
+const notUsed = 'foooooooooo';
 
